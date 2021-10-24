@@ -1,0 +1,126 @@
+
+.main-header {
+    position: relative;
+    background: url(https://i.ytimg.com/vi/tcIhds398j0/maxresdefault.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    height: 450px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.background-overlay {
+    position: absolute;
+    background: rgba(48, 51, 107,.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.info-header{
+    text-align: center;
+    background-color:rgba(233, 211, 103);
+}
+
+.galeria-transport{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-transport{
+    width: 100%;
+    margin-bottom: 5%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0, .5);
+
+}
+
+.imagen-transport > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    background:  rgba(48, 51, 107,.4);
+}
+.hover-galeria p{
+    color: #f2f2f2;
+    text-align: justify;
+}
+.hover-galeria h3{
+    color: #f2f2f2;
+    text-align: left;
+}
+
+.titulo-serv{
+    text-align: center;
+    color: #f9ca24;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100px;
+
+}
+
+.hover-galeria-garanty p{
+    color: #f2f2f2;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.hover-galeria-garanty h3{
+    color: #f2f2f2;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.min-garanty {
+    background: #192a56;
+}
+
+footer{
+    background: rgb(34, 95, 151);
+    overflow: hidden;
+}
+.content-foo{
+    text-align: center;
+}
+
+.container-footer{
+    padding-bottom: 2%;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo h4{
+   color: #f2f2f2;
+   border-bottom: 3px solid #f9ca24;
+   padding-bottom: 5px;
+   margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+
+ }
+
+ .titulo-final{
+    text-align: center;
+    font-size: 100%;
+    color: #f2f2f2;
+
+}
