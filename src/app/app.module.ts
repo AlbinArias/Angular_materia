@@ -16,17 +16,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TablapersonaComponent } from './tablapersona/tablapersona.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import{HttpClientModule} from '@angular/common/http';
+import{HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormestudiantesComponent } from './formestudiantes/formestudiantes.component';
 import { TablaestudiantesComponent } from './tablaestudiantes/tablaestudiantes.component';
 import { FormdocenteComponent } from './formdocente/formdocente.component';
 import { TabladocenteComponent } from './tabladocente/tabladocente.component';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+import { InterceptorService } from './SERVICES/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
     TablaestudiantesComponent,
     FormdocenteComponent,
     TabladocenteComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -58,9 +62,14 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
     ReactiveFormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthGuard,{
+    provide:HTTP_INTERCEPTORS,
+    useClass:InterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
