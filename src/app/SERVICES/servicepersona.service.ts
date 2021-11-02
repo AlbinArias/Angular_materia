@@ -8,7 +8,7 @@ import { TablapersonaItem } from '../tablapersona/tablapersona-datasource';
 })
 export class ServicepersonaService {
   
-  url='http://localhost:3000/personas';
+  url='https://gentle-bastion-60030.herokuapp.com/personas';
 
   constructor(private http: HttpClient) { }
 

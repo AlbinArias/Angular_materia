@@ -1,0 +1,16 @@
+<body>
+<div class="row">
+  <app-nav></app-nav>
+  <form (ngSubmit)="onLogin()">
+    <section class="form-register">
+      <h1>INICIAR SESION</h1>
+      <input class="controls" type="text" name="userName" id="userName" placeholder="Ingrese su userName"
+        [(ngModel)]="user.userName">
+      <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su password"
+        [(ngModel)]="user.password">
+
+      <input class="botons" type="submit" value="INICIAR SESION">
+    </section>
+  </form>
+</div>
+</body>

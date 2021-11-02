@@ -8,7 +8,7 @@ import { TablaestudiantesItem } from '../tablaestudiantes/tablaestudiantes-datas
 })
 export class ServiceestudianteService {
  
-  url='http://localhost:3000/estudiantes';
+  url='https://gentle-bastion-60030.herokuapp.com/estudiantes';
 
   constructor(private http: HttpClient) { }
 

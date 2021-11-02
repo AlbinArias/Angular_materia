@@ -8,7 +8,7 @@ import { TabladocenteItem } from '../tabladocente/tabladocente-datasource';
 })
 export class ServicedocenteService {
 
-  url='http://localhost:3000/maestros';
+  url='https://gentle-bastion-60030.herokuapp.com/maestros';
 
   constructor(private http: HttpClient) { }
 
