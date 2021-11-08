@@ -1,0 +1,52 @@
+<div class="row">
+  <app-nav></app-nav>
+  <div class="col-2">
+  </div>
+  <div class="col">
+    <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+      <mat-card class="shipping-card">
+        <mat-card-header>
+          <mat-card-title>Registrar Curso</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Nombre del Curso" formControlName="firstName" [(ngModel)]="Curso.nombres">
+                <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+                  Nombre del Curso is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Descripcion" formControlName="lastName" [(ngModel)]="Curso.descripcion">
+                <mat-error *ngIf="addressForm.controls['lastName'].hasError('required')">
+                  Descripcion is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+        </mat-card-content>
+        <mat-card-actions>
+       
+        </mat-card-actions>
+      </mat-card>
+    </form>
+
+  </div>
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-2">
+      <button mat-raised-button class="btn btn-success" type="submit" (click)="agregar()">Guardar</button>
+    </div>
+    <div class="col-2">
+      <button mat-raised-button class="btn btn-danger" type="submit" (click)="Oneliminar(Curso.nombres)">Eliminar Registro</button>
+    </div>
+    <div class="col-2">
+      <button mat-raised-button class="btn btn-info" type="submit" (click)="Onpersona()">Mostrar Tabla</button>
+    </div>
+  </div>
+</div>
