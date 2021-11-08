@@ -30,6 +30,12 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
 import { InterceptorService } from './SERVICES/interceptor.service';
+import { CursoComponent } from './curso/curso.component';
+import { CursoEstudianteComponent } from './curso-estudiante/curso-estudiante.component';
+import { CursoDocenteComponent } from './curso-docente/curso-docente.component';
+import { FormcursoComponent } from './formcurso/formcurso.component';
+import { FormcursoEstudianteComponent } from './formcurso-estudiante/formcurso-estudiante.component';
+import { FormcursoDocenteComponent } from './formcurso-docente/formcurso-docente.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +48,13 @@ import { InterceptorService } from './SERVICES/interceptor.service';
     FormdocenteComponent,
     TabladocenteComponent,
     BienvenidaComponent,
-    LoginComponent
+    LoginComponent,
+    CursoComponent,
+    CursoEstudianteComponent,
+    CursoDocenteComponent,
+    FormcursoComponent,
+    FormcursoEstudianteComponent,
+    FormcursoDocenteComponent
   ],
   imports: [
     BrowserModule,

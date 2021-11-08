@@ -28,6 +28,16 @@ export class NavComponent {
     this.router.navigate(["personas"])
   }
 
+  Oncurso(){
+    this.router.navigate(["cursos"])
+  }
+
+  Oncursodocente(){
+    this.router.navigate(["curso-docente"])
+  }
+  Oncursoestudiante(){
+    this.router.navigate(["curso-estudiante"])
+  }
   Onestudiante(){
     this.router.navigate(["estudiantes"])
   }
